@@ -1,0 +1,599 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 62.5%;
+    font-weight: 300;
+    color: #555;
+    font-family: 'Zilla Slab', serif;
+}
+h2 {
+    font-family: 'Cookie', cursive;
+    font-size: 10em;
+    color: #fff;
+}
+h3 {
+    font-weight: 500;
+    font-size: 2.4em;
+    color: #3b3b3b;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+h3 span {
+    position: relative;
+}
+h3 span::after {
+    content: '';
+    position: absolute;
+    width: 311px;
+    height: 1px;
+    top: 50%;
+    right: -326px;
+    background-color: #e3e1e1;
+}
+h5 {
+    font-weight: 700;
+    margin: 0;
+}
+p,h5 {
+    font-size: 1.8em;
+    line-height: 30px;
+}
+a {
+    text-decoration: none;
+}
+strong {
+    font-weight: 700;
+}
+hr {
+    margin: 40px 0;
+}
+.container {
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn {
+    font-weight: 500;
+    font-size: 1.8em;
+    color: #000;
+    background: #f34949;
+    padding: 6px 27px;
+}
+.btn-tab {
+    background-color: transparent;
+    border: 2px solid #3b3b3b;
+}
+.btn-tab:hover,
+.btn-tab.active {
+    background-color: #3b3b3b;
+    color: #fff;
+}
+ul {
+    list-style: none;
+}
+/* ======== HEADER ========== */
+header {
+    padding: 13px 0 8px;
+}
+nav {
+    display: table;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f34949;
+    text-align: center;
+    color: #000;
+}
+nav ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+nav a {
+    color: #fff;
+    font-size: 3.6em;
+    line-height: 70px;
+    padding: 5px 10px;
+}
+nav .btn {
+    background: #fff;
+    font-size: 3.6em;
+}
+nav .close {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    margin: 0;
+}
+nav .close span {
+    width: 35px;
+    height: 2px;
+    background: white;
+    display: block;
+    transform: rotate(45deg);
+}
+nav .close span:nth-child(2) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -2px;
+}
+.header-logo {
+    display: inline-block;
+}
+.burger {
+    width: 44px;
+    height: 25px;
+    padding: 5px 0;
+    float: right;
+    margin-top: 12px;
+}
+.burger span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin-top: 9px;
+}
+.burger span:nth-child(1) {
+    margin-top: 0;
+}
+/* ======== HEADER END ========== */
+
+/* ======== MENU ========== */
+.menu .head-title {
+    max-width: 551px;
+    margin: 0 auto;
+}
+.menu h3 {
+    position: relative;
+    color: #f34949;
+    padding: 0 15px;
+    overflow: hidden;
+}
+.menu h3 span {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+.menu h3 span:before,
+.menu h3 span:after {
+    content: '';
+    display: block;
+    width: 1000px;
+    position: absolute;
+    top: 0.73em;
+    border-top: 1px solid red;
+}
+.menu h3 span:before {
+    right: 100%;
+}
+.menu h3 span:after {
+    left: 100%;
+}
+.menu h1 {
+    font-size: 2em;
+    color: #363636;
+    font-weight: 400;
+    padding-bottom: 40px;
+    display: inline-block;
+    max-width: 1100px;
+}
+.menu .tabs {
+    padding-bottom: 60px;
+}
+.menu .tabs li {
+ text-transform: uppercase;
+ display: inline-block;
+ margin: 0 5px;
+ font-size: 1.4em;
+ cursor: pointer;
+}
+.menu .meals ul {
+    display: none;
+    text-align: left;
+}
+.menu .meals ul.active {
+    display: block;
+}
+.menu .meals li {
+    position: relative;
+    margin-bottom: 25px;
+}
+.menu .meals p {
+    font-size: 1.8em;
+    margin: 0;
+    display: inline;
+    font-weight: 500;
+    padding-right: 15px;
+    background: #fff;
+}
+.menu .meals li::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e3e1e1;
+    bottom: 30px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+.menu .meals small {
+    display: block;
+    color: #b7b7b7;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.menu .meals span {
+    position: absolute;
+    right: 0;
+    font-weight: 500;
+    font-size: 2em;
+    background: #fff;
+    bottom: 20px;
+    padding-left: 15px;
+}
+/* ======== MENU END ========== */
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .menu .meals li {
+        float: left;
+        width: 46%;
+        margin-bottom: 35px;
+    }
+    .menu .meals li:nth-child(even) {
+        margin-left: 4%;
+    }
+    .menu .meals li:nth-child(odd) {
+         margin-right: 4%;
+    }
+    .menu .tabs li {
+        padding: 11px 27px;
+        margin: 0 20px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    /* ======== HEADER ========== */
+    header {
+        padding: 25px 0 10px;
+    }
+    nav {
+        display: block;
+        position: initial;
+        width: auto;
+        height: auto;
+        background: inherit;
+        float: right;
+    }
+    nav li {
+        float: left;
+    }
+    nav a {
+        color: #000;
+        margin-left: 20px;
+    }
+    nav a:not(.btn).active,
+    nav a:not(.btn):hover {
+        color: #f34949;
+        border-top: 1px solid #f34949;
+        border-bottom: 1px solid #f34949;
+    }
+    nav a,
+    nav a.btn {
+        font-size: 1.8em;
+    }
+    nav a.btn {
+        color: #fff;
+        background: #f34949;
+    }
+    .burger,
+    nav .close {
+        display: none;
+    }
+    /* ======== HEADER END ========== */
+
+
+    /* ======== MENU ========== */
+    .menu h1 {
+        font-size: 2.4em;
+    }
+    .menu .meals li {
+        margin-bottom: 50px;
+    }
+    /* ======== MENU END========== */
+
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.unstyle-list {
+    margin: 0;
+    padding: 0;
+}
+.text-center {
+    text-align: center;
+}
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
